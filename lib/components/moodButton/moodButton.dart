@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class moodButton extends StatefulWidget {
+class MoodButton extends StatefulWidget {
   @override
-  _moodButtonState createState() => _moodButtonState();
+  _MoodButtonState createState() => _MoodButtonState();
 }
 
-class _moodButtonState extends State<moodButton> {
+class _MoodButtonState extends State<MoodButton> {
   final String extasic = "public/svg/5.svg";
   final String happy = "public/svg/4.svg";
   final String neutral = "public/svg/3.svg";
@@ -47,25 +47,35 @@ class _moodButtonState extends State<moodButton> {
       children: [
         Row(
           children: [
-            OutlinedButton(
+            TextButton(
               child: SvgPicture.asset(extasic, width: 48, height: 48),
-              onPressed: () => _showMyDialog(5),
+              onPressed: () {
+                _showMyDialog(5);
+              },
             ),
-            OutlinedButton(
+            TextButton(
               child: SvgPicture.asset(happy, width: 48, height: 48),
-              onPressed: () => _showMyDialog(4),
+              onPressed: () {
+                _showMyDialog(4);
+              },
             ),
-            OutlinedButton(
+            TextButton(
               child: SvgPicture.asset(neutral, width: 48, height: 48),
-              onPressed: () => _showMyDialog(3),
+              onPressed: () {
+                _showMyDialog(3);
+              },
             ),
-            OutlinedButton(
+            TextButton(
               child: SvgPicture.asset(sad, width: 48, height: 48),
-              onPressed: () => _showMyDialog(2),
+              onPressed: () {
+                _showMyDialog(2);
+              },
             ),
-            OutlinedButton(
+            TextButton(
               child: SvgPicture.asset(angry, width: 48, height: 48),
-              onPressed: () => _showMyDialog(1),
+              onPressed: () {
+                _showMyDialog(1);
+              },
             ),
           ],
         ),

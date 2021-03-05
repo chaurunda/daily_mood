@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             Text('Salut les zouzous'),
-            moodButton(),
+            MoodButton(),
           ],
         ),
       ),
