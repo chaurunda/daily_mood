@@ -15,6 +15,7 @@ moodRouter
     });
   })
   .post((req: Request, res: Response) => {
+    console.log(req.body);
     try {
       const mood = new moodModel(req.body);
       mood.save();

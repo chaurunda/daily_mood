@@ -20,11 +20,17 @@ class _HomeState extends State<Home> {
       ),
       drawer: MyDrawer(),
       body: Center(
-        child: Column(
-          children: [
-            Text('Salut les zouzous'),
-            MoodButton(),
-          ],
+        child: Container(
+          margin: const EdgeInsets.only(top: 10),
+          child: Column(
+            children: [
+              Text(
+                'Comment allez vous ?',
+                style: TextStyle(fontSize: 24),
+              ),
+              MoodButton(),
+            ],
+          ),
         ),
       ),
     );

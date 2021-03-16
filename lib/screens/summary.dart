@@ -20,11 +20,13 @@ class _SummaryState extends State<Summary> {
       ),
       drawer: (MyDrawer()),
       body: Center(
-        child: Column(
-          children: [
-            Text("Recapitulatif de votre humeur"),
-            SimpleChart(),
-          ],
+        child: Container(
+          child: Column(
+            children: [
+              Text("Recapitulatif de votre humeur"),
+              SimpleChart(),
+            ],
+          ),
         ),
       ),
     );
