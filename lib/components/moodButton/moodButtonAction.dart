@@ -8,8 +8,8 @@ class MoodButtonAction {
     var dt = DateTime.now();
     var newFormat = DateFormat('dd/MM/yyyy');
     String updatedDt = newFormat.format(dt);
-    print(updatedDt);
-    var url = Uri.parse('http://6f5811d4fcc6.ngrok.io/api');
+    const DBUrl = String.fromEnvironment("URL");
+    var url = Uri.parse('$DBUrl/api');
     print(url);
     print({'date': updatedDt, 'value': value});
     return http.post(url,
