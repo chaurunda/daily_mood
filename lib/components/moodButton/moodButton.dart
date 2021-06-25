@@ -1,4 +1,4 @@
-import 'package:daily_mood/components/moodButton/moodButtonAction.dart';
+import 'package:daily_mood/actions/moods/moodActions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,9 +16,8 @@ class _MoodButtonState extends State<MoodButton> {
   @override
   Widget build(BuildContext context) {
     Future<void> _showMyDialog(int moodLevel) async {
-      var action = MoodButtonAction();
+      var action = MoodActions();
       var response = await action.add(moodLevel);
-      print(response);
       return showDialog<void>(
         context: context,
         barrierDismissible: false, // user must tap button!
@@ -31,6 +30,7 @@ class _MoodButtonState extends State<MoodButton> {
                   Text('$moodLevel'),
                   Text('This is a demo alert dialog.'),
                   Text('Would you like to approve of this message?'),
+                  Text('$response'),
                 ],
               ),
             ),
