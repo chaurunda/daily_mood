@@ -8,6 +8,7 @@
       "name": "daily_mood",
       "request": "launch",
       "type": "dart",
+      "flutterMode": "debug",
       "args": ["--dart-define=URL='${input:MongoURL}'"]
     },
     {
