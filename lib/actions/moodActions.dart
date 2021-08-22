@@ -9,7 +9,7 @@ class MoodActions {
     var newFormat = DateFormat('dd/MM/yyyy');
     String updatedDt = newFormat.format(dt);
     const DBUrl = String.fromEnvironment("URL");
-    var url = Uri.parse('$DBUrl/api');
+    var url = Uri.parse('${DBUrl.replaceAll("'", "")}/api');
     final response = await http.post(url,
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'date': '$updatedDt', 'value': value}));
