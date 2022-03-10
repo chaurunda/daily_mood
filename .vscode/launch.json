@@ -5,6 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "command": "cd node && npm start",
+      "name": "daily_mood Node",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
       "name": "daily_mood",
       "request": "launch",
       "type": "dart",

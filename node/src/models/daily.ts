@@ -1,10 +1,14 @@
-import mongoose from "mongoose";
+import { Document, model, Schema } from "mongoose";
 
-const Schema = mongoose.Schema;
+interface Mood extends Document {
+  date: string;
+  value: number;
+}
 
-const moodModel = new Schema({
+const schema = new Schema<Mood>({
   date: { type: String, required: true },
   value: { type: Number, required: true },
 });
 
-export default mongoose.model("mood", moodModel);
+// @ts-ignore
+export default model<Mood>("mood", schema);

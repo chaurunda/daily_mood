@@ -1,12 +1,12 @@
 import express, { Request, Response } from "express";
-import moodModel from "../models/daily";
+import schema from "../models/daily";
 
 const moodRouter = express.Router();
 
 moodRouter
   .route("/")
   .get((req: Request, res: Response) => {
-    moodModel.find({}, (err, moods) => {
+    schema.find({}, (err, moods) => {
       try {
         res.status(200).json(moods);
       } catch (error) {
@@ -17,7 +17,7 @@ moodRouter
   .post((req: Request, res: Response) => {
     console.log(req.body);
     try {
-      const mood = new moodModel(req.body);
+      const mood = new schema(req.body);
       mood.save();
       res.status(201).send(mood);
     } catch (error) {
