@@ -16,7 +16,7 @@
     "@types/mongoose": "5.11.96",
     "ts-node": "9.1.1",
     "ts-node-dev": "1.1.8",
-    "tsc": "1.20150623.0",
+    "tsc": "2.0.4",
     "tslint": "6.1.3",
     "typescript": "4.9.3"
   },
